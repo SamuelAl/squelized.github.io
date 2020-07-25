@@ -10,15 +10,24 @@
   <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 </head>
+
 <body>
   <nav class="light-blue lighten-1" role="navigation">
     <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">SQuelized</a>
       <ul class="right hide-on-med-and-down">
         <li><a href="#">Home</a></li>
+        <li><a href="#">Download</a></li>
+        <li><a href="#">Documentation</a></li>
+        <li><a href="#">Reference</a></li>
+        <li><a href="#">About</a></li>
       </ul>
 
       <ul id="nav-mobile" class="sidenav">
         <li><a href="#">Home</a></li>
+        <li><a href="#">Download</a></li>
+        <li><a href="#">Documentation</a></li>
+        <li><a href="#">Reference</a></li>
+        <li><a href="#">About</a></li>
       </ul>
       <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
     </div>
@@ -31,7 +40,7 @@
         <h5 class="header col s12 light">A Processing library to manage connections to SQL databases</h5>
       </div>
       <div class="row center">
-        <a href="http://materializecss.com/getting-started.html" id="download-button" class="btn-large waves-effect waves-light orange">Get Started</a>
+        <a href="https://github.com/SamuelAl/SQuelized-for-Processing" id="download-button" class="btn-large waves-effect waves-light orange">Get Started</a>
       </div>
       <br><br>
 
@@ -80,6 +89,49 @@
     <br><br>
   </div>
 
+  <div class="container">
+    <div class="section">
+
+      <!--   Quick start   -->
+      <div class="row center">
+        <h3 class="header center orange-text">Quick Start</h3>
+        <h5 class="header center col s12 light">Everything you need to get started right away</h5>
+        <br><br>
+      </div>
+      <div class="row">
+        <h5 class="header">1. Download the files</h5>
+        <p>
+          Download the <a href="https://github.com/SamuelAl/SQuelized-for-Processing">SQuelized library</a> files into your computer. 
+          Unzip and put the extracted SQuelized folder into the libraries folder of your Processing sketches. <br>
+          In a Windows System, it
+          is usually found in <i>C:\Users\User\Documents\Processing\libraries</i>
+        </p>
+
+        <h5 class="header">2. Verify Setup</h5>
+        <p>
+          To verify that the installation was done correctly, open your latest version of Processing PDE. Under the menu <b>Sketch</b>,
+          select <b>Import Library</b> and check that <b>SQuelized</b> appears on the list. If it does, then everything was done correctly.
+          If it doesn't, then you probably did not copy the files to the correct folder. Check the steps above.
+        </p>
+        <img class="responsive-img"
+             style="margin: 10px;" 
+             src="./resources/images/Processing_Library_screenshot.png" 
+             alt="Screenshot of Processing sketch library import">
+
+        <h5 class="header">3. Import the library</h5>
+        <p>
+          Import the library into your sketch. To do this, either use the above-mentioned menu to import the library by clicking on 
+          <b>SQuelized</b> or manually import it by adding the corresponding import statement.
+          <script src="https://gist.github.com/SamuelAl/aba0920aa63ce8af72a20fab19c9c565.js"></script>
+        </p>
+
+        <h5 class="header">4. Connect to a database!</h5>
+      </div>
+
+    </div>
+    <br><br>
+  </div>
+
   <footer class="page-footer orange">
     <div class="container">
       <div class="row">
@@ -90,8 +142,6 @@
             no up-to-date libraries that could help us implement a SQL database API for our project, we were forced to do everything from scratch.
             This is an effort to avoid other students going through the same troubles. Enjoy and learn!
           </p>
-
-
         </div>
         <div class="col l3 s12">
           <h5 class="white-text">Settings</h5>
