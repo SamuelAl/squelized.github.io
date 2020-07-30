@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>Docs - Main</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="../css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="../css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+</head>
+
+<body>
+    
+  <div class="container">
+    <div class="section">
+
+      <!--   Displaying records   -->
+      <div class="row">
+        <h3 class="header orange-text">Custom Queries</h3>
+      </div>
+      <div class="row">
+        <p>
+            In order to execute more specific database operations custom queries must be used. These can be run through the <b>runQuery(String query)</b>
+            method of the SQLConnection object.
+        </p>
+        <h5 class="header">The runQuery method</h5>
+        <p>
+            The runQuery method is the core and most versatile method of the SQLConnection class, and your best friend when accessing operating
+            on a database.
+            Its operation is very simple, but requires knowledge of the SQL language. If you are new to SQL or need to brush-up on the syntax,
+            we personally reccommend you visit w3schools.com's <a href="https://www.w3schools.com/sql/">SQL tutorial</a>. It is extremely concise and
+            to the point.
+        </p>
+        <p>
+            In order to run a query through the runQuery method, just specify the SQL query in a string and give it as a parameter to the function.
+            Any result from the query will be returned as a table after the command runs successfully. If there is any error, an error message will be
+            displayed in the console.
+        </p>
+        <script src="https://gist.github.com/SamuelAl/3c814dcb0edc8566c8debf56c4ce6393.js"></script>
+        <p>
+            Through this command, the possibilities are endless, but be careful that the syntax is all correct or the commands won't work!
+            For more information on SQuelized's functionality, please review the reference section. 
+        </p>
+      </div>
+    </div>
+  </div>
+
+
+    <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="../js/materialize.js"></script>
+  <script src="../js/init.js"></script>
+
+  </body>
+</html>
