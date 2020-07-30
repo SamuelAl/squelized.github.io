@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>Docs - Main</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="../css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="../css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+</head>
+
+<body>
+    
+  <div class="container">
+    <div class="section">
+
+      <!--   Displaying records   -->
+      <div class="row">
+        <h3 class="header orange-text">Displaying Records</h3>
+      </div>
+      <div class="row">
+        <p>
+            For the most part, Processing applications are made as a means to visualize and represent data stored in a database
+            in a meaningful and attractive way. This is why SQuelized comes packed with some basic functionality to make accessing
+            stored data easier and faster.
+        </p>
+        <h5 class="header">Accessing tables <br> and the Processing Table object</h5>
+        <p>
+          SQuelized presents database data in the form of <b>tables</b>. All query results are automatically organized into Processing tables.
+          If you are new to Processing, we reccommend you to become familiar with the 
+          <a href="https://processing.org/reference/Table.html">Table</a> and <a href="https://processing.org/reference/TableRow.html">TableRow</a> classes, 
+          as they are essential to be able to manipulate the data once extracted from the database.
+        </p>
+        <p>
+            A simple way to access all the data stored in a table is through the <b>getTable(String tableName)</b> method your SQLConnection
+            object. This method takes in the name of a table in your database and returns all the records of the table in the form of
+            a Processing table.
+        </p>
+        <script src="https://gist.github.com/SamuelAl/7d6c5950d009027a7bf59392ad2dfd56.js"></script>
+        <h5 class="header">Accessing specific columns</h5>
+        <p>
+            SQuelized also allows you to access the data in specific columns of a table. This can be done through the <b>getColumn(String tableName, String columnName)</b>
+            and <b>getColumns(String tableName, String[] columnNames)</b> methods of the SQLConnection object. The results are returned as a Processing table.
+        </p>
+        <script src="https://gist.github.com/SamuelAl/4b69410cc2cb17052029eb06f15287e4.js"></script>
+        <h5 class="header">Custom queries</h5>
+        <p>
+            To search, filter, update, insert and delete data, custom queries must be used, as discussed in the next section. See you there!
+        </p>
+      </div>
+    </div>
+  </div>
+
+
+    <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="../js/materialize.js"></script>
+  <script src="../js/init.js"></script>
+
+  </body>
+</html>
