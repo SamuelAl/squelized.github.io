@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>Docs - Main</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="../css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="../css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+</head>
+
+<body>
+    
+  <div class="container">
+    <div class="section">
+
+      <!--   Setting up a connection   -->
+      <div class="row">
+        <h3 class="header orange-text">Setting up a connection</h3>
+        <br><br>
+      </div>
+      <div class="row">
+        
+        <h5 class="header">The SQLConnection class</h5>
+        <p>
+          At the core of the SQuelized library, there is the <b>SQLConnection class</b>. This is the main object representing the 
+          connection to an SQL-based database, and you must instantiate at least one to use the SQuelized functionality. <br>
+          Each SQL <i>flavour</i> uses a different type, or <i>extension</i>, of the SQLConnection class, mainly:
+        </p>
+        <ol>
+          <li><b>MySQLConnection:</b> used for MySQL databases</li>
+          <li><b>SQLiteConnection:</b> used for SQLite databases</li>
+          <li><b>PostgreSQLConnection:</b> used for PostgreSQL databases</li>
+        </ol>
+        
+        <script src="https://gist.github.com/SamuelAl/100a60cc61bc75cdc3b8904020bc7fc7.js"></script>
+
+        <p>
+         SQuelized has made a conscious choice of design to remain explicit as to the connection type being used. This is also for pedagogical
+         purposes. Each type of connection needs or accepts different parameters, and the users will need to be familiar with the SQL flavour
+         they are using in order to discern which parameters are needed to make a succesfull connection. For more information on the different parameters
+         needed for a connection, such as how to construct a <b>connection url</b>, we reccommend reading the documentation for the appropriate JDBC driver. 
+         Some of the most typical cases are described below.
+        </p>
+
+        <h5 class="header">Usernames and Passwords</h5>
+        <p>
+          Some database types, such as <b>MySQL</b> or <b>PostgreSQL</b>, usually require a username and a password to make a successful
+          connection. While it is possible to specify these in the <b>url</b>, we reccommend to specify them separately through the constructor,
+          so as to avoid url errors due to typos or incorrect ordering of parameters. For example:
+        </p>
+        <script src="https://gist.github.com/SamuelAl/86ca94da4835f4a6eccd8931b8601c6e.js"></script>
+
+        <h5 class="header">Props and the Properties object</h5>
+        <p>
+          SQLConnection constructors that have optional parameters also accept <i>Property</i> objects. These objects can be constructed
+          and customized using key-value pairs to specify different settings for the connection, including <b>username</b> and <b>password</b>
+          settings, as discussed above. <br>
+          This might be a cleaner and preferred way to specify connection settings, as the Property objects can be reused for different connections.
+        </p>
+        <script src="https://gist.github.com/SamuelAl/b9646982794ce4c943db5caadf07018f.js"></script>
+        <h5 class="header">Using the connection</h5>
+        <p>
+          Once the connection object has been instantiated, we can use this object to access and modify the database through queries, as 
+          you will see in the following sections!
+        </p>
+      </div>
+    </div>
+  </div>
+
+
+    <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="../js/materialize.js"></script>
+  <script src="../js/init.js"></script>
+
+  </body>
+</html>

@@ -58,26 +58,21 @@
             
       </div>
       <div class="row" style="height: 400px;">
-        <iframe name="iframe" class="col s12 m9" style="height:100%" id="content" src="./test-doc.html" frameborder="0"></iframe>
+        <iframe name="iframe" class="col s12 m9" style="height:100%" id="content" src="./setup-connection.html" frameborder="0"></iframe>
       </div>
 
       <script>
 
         // Selecting the iframe element
-    
         var iframe = document.getElementById("content");
-    
-        
-    
+  
         // Adjusting the iframe height onload event
     
         iframe.onload = function(){
-    
-            iframe.style.height = iframe.contentWindow.document.body.scrollHeight + 'px';
-    
+            iframe.style.height = (iframe.contentWindow.document.body.scrollHeight + 30) + 'px';
         }
     
-        </script>
+      </script>
   </div>
 
   <div class="container">
