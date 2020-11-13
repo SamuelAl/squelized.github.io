@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>Docs - Main</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="../css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="../css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+</head>
+
+<body>
+    
+  <div class="container">
+    <div class="section">
+
+      <!--   Displaying records   -->
+      <div class="row">
+        <h3 class="header orange-text">Updating and Inserting Data</h3>
+      </div>
+      <div class="row">
+        <p>
+            What is the use of a database if you cannot modify and add new data! Since SQuelized 1.1, we have
+            added new support for <b>custom Update Queries</b> through the <b>SQLConnection</b> object
+        </p>
+        <h5 class="header">Update Queries</h5>
+        <p>
+          Generally, SQL queries that modify or insert data into a database are called <b>Update Queries</b>.
+          Typical examples include INSERT INTO queries or DELETE queries. These queries do not give back results,
+          but modify the database in different ways. While SQuelized has specific methods to do tasks such as data 
+          insertion, many users will still need to execute custom queries in their programs. This is why we have
+          provided the <b>updateQuery</b> method.
+        </p>
+        <p>
+            Similar to the <b>runQuery</b> method to display records from a query, the updateQuery method accepts an
+            SQL query in the form of a String, and will run the query if it is valid. If it is not, or some other error occurs,
+            it will display it on the output terminal.
+        </p>
+        <script src="https://gist.github.com/SamuelAl/f19cbe836b860e3bb257a1c61e7ad9b6.js"></script>        
+      </div>
+    </div>
+  </div>
+
+
+    <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="../js/materialize.js"></script>
+  <script src="../js/init.js"></script>
+
+  </body>
+</html>
